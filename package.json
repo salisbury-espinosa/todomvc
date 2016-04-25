@@ -1,7 +1,8 @@
 {
-  "name": "redux-todomvc-example",
-  "version": "0.0.0",
-  "description": "Redux TodoMVC example",
+  "name": "todomvc",
+  "version": "1.0.0-beta",
+  "description": "MaidSAFE • TodoMVC",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack",
@@ -12,13 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/redux.git"
+    "url": "git+https://github.com/Zatvobor/todomvc.git"
   },
-  "license": "MIT",
+  "author": "Aleksey Zatvobor <a.zatvornitskiy@gmail.com> (http://github.com/zatvobor)",
+  "license": "CC-BY-4.0",
   "bugs": {
-    "url": "https://github.com/reactjs/redux/issues"
+    "url": "https://github.com/Zatvobor/todomvc/issues"
   },
-  "homepage": "http://redux.js.org",
+  "homepage": "https://github.com/Zatvobor/todomvc#readme",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
