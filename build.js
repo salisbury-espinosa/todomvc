@@ -4,5 +4,5 @@ var config = require('./webpack.config');
 
 var compiler = webpack(config);
 compiler.run(function (err, stats) {
-    console.log(err)
+    console.log(err); // по завершению, выводим всю статистику
 });
