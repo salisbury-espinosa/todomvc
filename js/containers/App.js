@@ -8,26 +8,46 @@ import * as TodoActions from '../actions/todos'
 
 class App extends Component {
   render() {
-    const { todos, authorizations, actions } = this.props
-    console.info(authorizations)
-    return (
-      <div>
-        <Header addTodo={actions.addTodo} />
-        <MainSection todos={todos} actions={actions} />
-      </div>
-    )
+    const { todos, auth, actions } = this.props
+
+    if (auth.isProcessAuthentication) {
+
+      return (
+        <div>
+          Please check the SAFE Launcher and grant access to the MaidSafe Demo application to connect to the SAFE Network.
+        </div>
+      )
+    }
+    else if (auth.isAuthenticated) {
+
+      return (
+        <div>
+          <Header addTodo={actions.addTodo} />
+          <MainSection todos={todos} actions={actions} />
+        </div>
+      )
+    }
+    else {
+
+      return (
+        <div>
+          Error: {auth.error}
+        </div>
+      )
+    }
   }
 }
 
 App.propTypes = {
   todos: PropTypes.array.isRequired,
-  authorizations: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos, authorizations: state.authorizations
+    todos: state.todos,
+    auth: state.auth
   }
 }
 

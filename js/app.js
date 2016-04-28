@@ -15,5 +15,5 @@ render(
   document.getElementById('root')
 )
 
-import { authorizeApp } from './actions/authorizations'
-store.dispatch( authorizeApp() )
+import { authoriseApp } from './actions/auth'
+store.dispatch( authoriseApp() )

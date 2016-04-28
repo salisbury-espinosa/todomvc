@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux'
 
-import authorizations from './authorizations'
+import auth from './auth'
 import todos from './todos'
 
 const rootReducer = combineReducers({
-  authorizations, todos
+  auth,
+  todos
 })
 
 export default rootReducer
